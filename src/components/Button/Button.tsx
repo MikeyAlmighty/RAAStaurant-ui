@@ -24,8 +24,8 @@ const StyledButton = styled.button<ButtonProps>`
     props.size === "small"
       ? "7px 25px 8px"
       : props.size === "medium"
-      ? "9px 30px 11px"
-      : "14px 30px 16px"};
+        ? "9px 30px 11px"
+        : "14px 30px 16px"};
 `;
 
 const Button: React.FC<ButtonProps> = ({
