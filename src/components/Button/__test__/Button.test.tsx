@@ -7,6 +7,5 @@ describe("Button component", () => {
     render(<Button />);
     const button = screen.getByRole("button");
     expect(button).toBeInTheDocument();
-    console.log("dead");
   });
 });
