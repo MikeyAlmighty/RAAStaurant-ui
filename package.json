@@ -1,5 +1,5 @@
 {
-  "name": "@MikeyAlmighty/RAAStaurant-ui",
+  "name": "@MikeyAlmighty/raastaurant-ui",
   "version": "1.0.0",
   "type": "module",
   "main": "dist/index.cjs.js",
@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MikeyAlmighty/RAAStaurant-ui.git"
+    "url": "https://github.com/MikeyAlmighty/raastaurant-ui.git"
   },
   "scripts": {
     "dev": "vite",
