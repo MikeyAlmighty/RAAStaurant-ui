@@ -18,6 +18,13 @@
     "test:ui": "vitest --ui",
     "build-storybook": "storybook build"
   },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run format",
+      "npm run lint",
+      "npm run test"
+    ]
+  },
   "dependencies": {
     "react-dom": "^18.2.0"
   },
