@@ -1,6 +1,6 @@
 {
   "name": "@MikeyAlmighty/raastaurant-ui",
-  "version": "1.1.1",
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -18,11 +18,13 @@
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --report-unused-disable-directives --max-warnings 0 --fix",
     "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
     "preview": "vite preview",
+    "release": "standard-version",
     "storybook": "storybook dev -p 6006",
     "test": "vitest run",
     "test-watch": "vitest",
     "test:ui": "vitest --ui",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "semantic-release": "semantic-release"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -32,7 +34,14 @@
     ]
   },
   "dependencies": {
-    "react-dom": "^18.2.0"
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.4",
+    "@semantic-release/npm": "^11.0.1",
+    "@semantic-release/release-notes-generator": "^12.1.0",
+    "react-dom": "^18.2.0",
+    "semantic-release": "^22.0.8"
   },
   "peerDependencies": {
     "react": "^18.2.0"
@@ -71,7 +80,8 @@
     "typescript": "^5.3.2",
     "vite": "^5.0.4",
     "vite-plugin-dts": "^3.6.4",
-    "vitest": "^0.34.6"
+    "vitest": "^0.34.6",
+    "semantic-release": "^22.0.10"
   },
   "files": [
     "/dist"

@@ -3,12 +3,13 @@ on:
   push:
     branches:
       - main
-      -
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
+      issues: write
+      pull-requests: write
       packages: write
     steps:
       - uses: actions/checkout@v4
@@ -18,6 +19,11 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: ${{ github.repository_owner }}
       - run: npm ci
-      - run: npm publish
+      - run: npm run build
+      - run: npx semantic-release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      - run: npm publish
+#        env:
+#          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
