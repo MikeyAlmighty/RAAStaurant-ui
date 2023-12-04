@@ -1,12 +1,23 @@
 export default {
-  "extends": ["@commitlint/config-conventional"],
-  "rules": {
-    "subject-case": [
+  extends: ["@commitlint/config-conventional"],
+  rules: {
+    //   TODO Add Scope Enum Here
+    // 'scope-enum': [2, 'always', ['yourscope', 'yourscope']],
+    "type-enum": [
       2,
-      "never",
+      "always",
       [
-        "start-case",
-        "pascal-case"
+        "feat",
+        "fix",
+        "docs",
+        "chore",
+        "style",
+        "refactor",
+        "ci",
+        "test",
+        "revert",
+        "perf",
+        "vercel"
       ]
     ]
   }
