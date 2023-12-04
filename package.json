@@ -39,6 +39,8 @@
   },
   "author": "Michael Leibbrandt",
   "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "@storybook/addon-essentials": "^7.6.2",
     "@storybook/addon-interactions": "^7.6.2",
     "@storybook/addon-links": "^7.6.2",
@@ -73,5 +75,25 @@
   },
   "files": [
     "/dist"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E  HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "subject-case": [
+        2,
+        "never",
+        [
+          "start-case",
+          "pascal-case"
+        ]
+      ]
+    }
+  }
 }
