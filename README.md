@@ -4,8 +4,11 @@ Component Library for **RAAStaurant**
 
 ## Release (CI/CD)
 
-- This project follows [SemVer](https://semver.org/) versioning
-  We use of [Semantic Release](https://www.npmjs.com/package/semantic-release)
+### This project follows [SemVer](https://semver.org/) versioning
+
+We make use of:
+
+- [Semantic Release](https://www.npmjs.com/package/semantic-release)
 
 | Type                                           | Outcome        | Example                                                                                            | Version |
 |------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------|---------|
