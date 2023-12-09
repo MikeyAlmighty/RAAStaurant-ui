@@ -13,7 +13,7 @@ type Story = StoryObj<typeof Example>;
 export const Primary: Story = {
   args: {
     text: "Primary",
-    type: ColorType.PRIMARY,
+    buttonType: ColorType.PRIMARY,
     disabled: false,
     size: "small",
     onClick: () => console.log("Button"),
@@ -22,7 +22,7 @@ export const Primary: Story = {
 export const Secondary: Story = {
   args: {
     text: "Secondary",
-    type: ColorType.SECONDARY,
+    buttonType: ColorType.SECONDARY,
     disabled: false,
     size: "small",
     onClick: () => console.log("Button"),
@@ -32,7 +32,7 @@ export const Secondary: Story = {
 export const Tertiary: Story = {
   args: {
     text: "Tertiary",
-    type: ColorType.TERTIARY,
+    buttonType: ColorType.TERTIARY,
     disabled: false,
     size: "small",
     onClick: () => console.log("Button"),

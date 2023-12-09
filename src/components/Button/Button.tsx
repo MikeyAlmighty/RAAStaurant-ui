@@ -4,7 +4,7 @@ import { ColorType } from "../../utils/constants.ts";
 
 export type ButtonProps = {
   text?: string;
-  type?: ColorType;
+  buttonType?: ColorType;
   disabled?: boolean;
   size?: "small" | "medium" | "large";
   onClick?: MouseEventHandler<HTMLButtonElement>;
@@ -18,8 +18,12 @@ const StyledButton = styled.button<ButtonProps>`
   font-weight: 700;
   border-radius: 10px;
   display: inline-block;
-  color: ${(props) => (props.primary ? "#fff" : "#000")};
-  background-color: ${(props) => (props.primary ? "#FF5655" : "#f4c4c4")};
+  // TODO: Create Map
+  color: ${(props) =>
+    props.buttonType === ColorType.PRIMARY ? "#fff" : "#000"};
+  // TODO: Create Map
+  background-color: ${(props) =>
+    props.buttonType === ColorType.PRIMARY ? "#FF5655" : "#f4c4c4"};
   padding: ${(props) =>
     props.size === "small"
       ? "7px 25px 8px"
@@ -30,7 +34,7 @@ const StyledButton = styled.button<ButtonProps>`
 
 const Button: React.FC<ButtonProps> = ({
   size,
-  primary,
+  buttonType,
   disabled,
   text,
   onClick,
@@ -40,7 +44,7 @@ const Button: React.FC<ButtonProps> = ({
     <StyledButton
       type="button"
       onClick={onClick}
-      primary={primary}
+      buttonType={buttonType}
       disabled={disabled}
       size={size}
       {...props}
