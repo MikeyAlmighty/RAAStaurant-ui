@@ -1,7 +1,8 @@
 import React, { MouseEventHandler } from "react";
 import styled from "styled-components";
-import { COLOR_TYPE, SIZE } from "../../utils/constants.ts";
-import { COLOR, PADDING } from "../../utils/theme.ts";
+
+import { COLOR_TYPE, SIZE } from "@/utils/constants.ts";
+import { COLOR, PADDING } from "@/utils/theme.ts";
 
 export type ButtonProps = {
   text?: string;
