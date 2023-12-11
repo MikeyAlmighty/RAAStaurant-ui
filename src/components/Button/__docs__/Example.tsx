@@ -4,7 +4,7 @@ import Button, { ButtonProps } from "../Button";
 const Example: FC<ButtonProps> = ({
   disabled = false,
   onClick = () => {},
-  primary = true,
+  buttonType = true,
   size = "small",
   text = "Button",
 }) => {
@@ -22,7 +22,7 @@ const Example: FC<ButtonProps> = ({
         text={text}
         disabled={disabled}
         onClick={onClick}
-        primary={primary}
+        buttonType={buttonType}
       />
     </div>
   );

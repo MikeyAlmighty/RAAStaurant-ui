@@ -1,6 +1,7 @@
 import React, { MouseEventHandler } from "react";
 import styled from "styled-components";
 import { ColorType } from "../../utils/constants.ts";
+import { COLORS } from "../../utils/theme.ts";
 
 export type ButtonProps = {
   text?: string;
@@ -8,6 +9,21 @@ export type ButtonProps = {
   disabled?: boolean;
   size?: "small" | "medium" | "large";
   onClick?: MouseEventHandler<HTMLButtonElement>;
+};
+
+const colorMap = {
+  [ColorType.PRIMARY]: {
+    backgroundColor: COLORS[ColorType.PRIMARY],
+    color: COLORS.white,
+  },
+  [ColorType.SECONDARY]: {
+    backgroundColor: COLORS[ColorType.SECONDARY],
+    color: COLORS.black,
+  },
+  [ColorType.TERTIARY]: {
+    backgroundColor: COLORS[ColorType.TERTIARY],
+    color: COLORS.black,
+  },
 };
 
 const StyledButton = styled.button<ButtonProps>`
@@ -18,12 +34,14 @@ const StyledButton = styled.button<ButtonProps>`
   font-weight: 700;
   border-radius: 10px;
   display: inline-block;
-  // TODO: Create Map
-  color: ${(props) =>
-    props.buttonType === ColorType.PRIMARY ? "#fff" : "#000"};
-  // TODO: Create Map
-  background-color: ${(props) =>
-    props.buttonType === ColorType.PRIMARY ? "#FF5655" : "#f4c4c4"};
+  color: ${({ buttonType }) =>
+    buttonType ? colorMap[buttonType].color : COLORS.white};
+  background-color: ${(props) => {
+    console.log("PROPS: ", props);
+    return props.buttonType
+      ? colorMap[props.buttonType].backgroundColor
+      : COLORS.black;
+  }};
   padding: ${(props) =>
     props.size === "small"
       ? "7px 25px 8px"
