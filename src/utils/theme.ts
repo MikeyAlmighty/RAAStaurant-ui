@@ -1,6 +1,6 @@
 import { ColorType } from "./constants.ts";
 
-const COLORS = {
+const COLOR = {
   [ColorType.PRIMARY]: "#37FB26",
   [ColorType.SECONDARY]: "#BCBDBD",
   [ColorType.TERTIARY]: "#F8587E",
@@ -9,4 +9,4 @@ const COLORS = {
   white: "#FFFFFF",
 };
 
-export { COLORS };
+export { COLOR };

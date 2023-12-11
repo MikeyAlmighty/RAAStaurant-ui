@@ -1,7 +1,7 @@
 import React, { MouseEventHandler } from "react";
 import styled from "styled-components";
 import { ColorType } from "../../utils/constants.ts";
-import { COLORS } from "../../utils/theme.ts";
+import { COLOR } from "../../utils/theme.ts";
 
 export type ButtonProps = {
   text?: string;
@@ -13,16 +13,16 @@ export type ButtonProps = {
 
 const colorMap = {
   [ColorType.PRIMARY]: {
-    backgroundColor: COLORS[ColorType.PRIMARY],
-    color: COLORS.white,
+    backgroundColor: COLOR[ColorType.PRIMARY],
+    color: COLOR.white,
   },
   [ColorType.SECONDARY]: {
-    backgroundColor: COLORS[ColorType.SECONDARY],
-    color: COLORS.black,
+    backgroundColor: COLOR[ColorType.SECONDARY],
+    color: COLOR.black,
   },
   [ColorType.TERTIARY]: {
-    backgroundColor: COLORS[ColorType.TERTIARY],
-    color: COLORS.black,
+    backgroundColor: COLOR[ColorType.TERTIARY],
+    color: COLOR.black,
   },
 };
 
@@ -32,15 +32,15 @@ const StyledButton = styled.button<ButtonProps>`
   font-size: 15px;
   cursor: pointer;
   font-weight: 700;
-  border-radius: 10px;
+  border-radius: 25px;
   display: inline-block;
   color: ${({ buttonType }) =>
-    buttonType ? colorMap[buttonType].color : COLORS.white};
+    buttonType ? colorMap[buttonType].color : COLOR.white};
   background-color: ${(props) => {
     console.log("PROPS: ", props);
     return props.buttonType
       ? colorMap[props.buttonType].backgroundColor
-      : COLORS.black;
+      : COLOR.black;
   }};
   padding: ${(props) =>
     props.size === "small"
