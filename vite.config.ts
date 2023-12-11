@@ -2,7 +2,6 @@
 
 import { defineConfig } from "vite";
 import * as path from "path";
-import react from "react";
 
 import dts from "vite-plugin-dts";
 import { peerDependencies } from "./package.json";
@@ -29,5 +28,5 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: "./setupTests.ts",
   },
-  plugins: [react(), dts()], // Uses the 'vite-plugin-dts' plugin for generating TypeScript declaration files (d.ts).
+  plugins: [dts()], // Uses the 'vite-plugin-dts' plugin for generating TypeScript declaration files (d.ts).
 });
