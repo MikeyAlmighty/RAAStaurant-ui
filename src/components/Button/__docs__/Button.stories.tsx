@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Example from "./Example";
-import { ColorType } from "../../../utils/constants";
+import { COLOR_TYPE } from "../../../utils/constants";
 
 const meta: Meta<typeof Example> = {
   title: "Button",
@@ -13,18 +13,16 @@ type Story = StoryObj<typeof Example>;
 export const Primary: Story = {
   args: {
     text: "Primary",
-    buttonType: ColorType.PRIMARY,
+    buttonType: COLOR_TYPE.PRIMARY,
     disabled: false,
-    size: "small",
     onClick: () => console.log("Button"),
   },
 };
 export const Secondary: Story = {
   args: {
     text: "Secondary",
-    buttonType: ColorType.SECONDARY,
+    buttonType: COLOR_TYPE.SECONDARY,
     disabled: false,
-    size: "small",
     onClick: () => console.log("Button"),
   },
 };
@@ -32,9 +30,8 @@ export const Secondary: Story = {
 export const Tertiary: Story = {
   args: {
     text: "Tertiary",
-    buttonType: ColorType.TERTIARY,
+    buttonType: COLOR_TYPE.TERTIARY,
     disabled: false,
-    size: "small",
     onClick: () => console.log("Button"),
   },
 };
