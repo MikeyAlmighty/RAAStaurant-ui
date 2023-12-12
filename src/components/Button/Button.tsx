@@ -8,6 +8,7 @@ export type ButtonProps = {
   text?: string;
   buttonType?: COLOR_TYPE;
   disabled?: boolean;
+  testid?: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 };
 
@@ -48,6 +49,7 @@ const Button: React.FC<ButtonProps> = ({
   buttonType,
   disabled,
   text,
+  testid,
   onClick,
   ...props
 }) => {
@@ -55,6 +57,7 @@ const Button: React.FC<ButtonProps> = ({
     <StyledButton
       type="button"
       onClick={onClick}
+      data-testid={testid}
       buttonType={buttonType}
       disabled={disabled}
       {...props}
