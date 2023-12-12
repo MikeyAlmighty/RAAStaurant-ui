@@ -58,7 +58,7 @@ const Button: React.FC<ButtonProps> = ({
       type="button"
       onClick={onClick}
       data-testid={testid}
-      buttonType={buttonType}
+      button-type={buttonType}
       disabled={disabled}
       {...props}
     >
