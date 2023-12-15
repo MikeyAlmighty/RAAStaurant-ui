@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Button, { ButtonProps } from "../Button";
 
-const Example: FC<ButtonProps> = ({
+const ExampleButton: FC<ButtonProps> = ({
   disabled = false,
   onClick = () => {},
   buttonType,
@@ -26,4 +26,4 @@ const Example: FC<ButtonProps> = ({
   );
 };
 
-export default Example;
+export default ExampleButton;

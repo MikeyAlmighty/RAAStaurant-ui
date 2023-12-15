@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Example from "./Example";
+import ExampleButton from "./Example";
 import { COLOR_TYPE } from "../../../utils/constants";
 
-const meta: Meta<typeof Example> = {
+const meta: Meta<typeof ExampleButton> = {
   title: "Button",
-  component: Example,
+  component: ExampleButton,
 };
 
 export default meta;
-type Story = StoryObj<typeof Example>;
+type Story = StoryObj<typeof ExampleButton>;
 
 export const Primary: Story = {
   args: {

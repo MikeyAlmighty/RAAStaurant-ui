@@ -1,4 +1,4 @@
-import { COLOR_TYPE, SIZE } from "./constants.ts";
+import { COLOR_TYPE } from "./constants.ts";
 
 const COLOR = {
   [COLOR_TYPE.PRIMARY]: "#37FB26",
@@ -9,21 +9,21 @@ const COLOR = {
   white: "#FFFFFF",
 };
 
-const PADDING = {
-  [SIZE.XSMALL]: ".25em",
-  [SIZE.SMALL]: ".5em",
-  [SIZE.MEDIUM]: ".75em",
-  [SIZE.LARGE]: "1em",
-  [SIZE.XLARGE]: "1.25em",
-};
+enum PADDING {
+  xs = ".25em",
+  s = ".5em",
+  m = ".75em",
+  l = "1em",
+  xl = "1.25em",
+}
 
-const MARGIN = {
-  xs: ".25em",
-  s: ".5em",
-  m: ".75em",
-  l: "1em",
-  xl: "1.25em",
-};
+enum MARGIN {
+  xs = ".25em",
+  s = ".5em",
+  m = ".75em",
+  l = "1em",
+  xl = "1.25em",
+}
 
 const RADII = {
   xs: ".25em",
