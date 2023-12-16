@@ -37,8 +37,4 @@ export const StyledButton = styled(motion.button)<ButtonProps>`
     $buttonType ? ButtonColorMapper[$buttonType].textColor : COLOR.white};
   background-color: ${({ $buttonType }) =>
     $buttonType ? ButtonColorMapper[$buttonType].backgroundColor : COLOR.black};
-
-  // &:hover {
-  //   border: 2px solid ${COLOR.black};
-  // }
 `;

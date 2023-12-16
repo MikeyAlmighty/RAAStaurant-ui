@@ -12,6 +12,12 @@ type Story = StoryObj<typeof ExampleProductCard>;
 export const NoDiscount: Story = {
   args: {
     disabled: false,
+    discount: {
+      hasDiscount: false,
+    },
+    title: "Chicken Burger",
+    description:
+      "Gouda cheese, chicken breasts, little gem, white cabbage, honey",
     onClick: () => console.log("Button"),
   },
 };
@@ -19,6 +25,13 @@ export const NoDiscount: Story = {
 export const Discount: Story = {
   args: {
     disabled: false,
-    onClick: () => console.log("Button"),
+    discount: {
+      hasDiscount: true,
+      discountLabel: "30% Off",
+    },
+    title: "Chicken Burger",
+    description:
+      "Gouda cheese, chicken breasts, little gem, white cabbage, honey",
+    onClick: () => console.log("ProductCard"),
   },
 };

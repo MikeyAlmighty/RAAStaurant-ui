@@ -9,6 +9,20 @@ const COLOR = {
   white: "#FFFFFF",
 };
 
+enum SCREEN_HEIGHT {
+  quarter = "25vh",
+  half = "50vh",
+  threeQuarter = "75vh",
+  full = "100vh",
+}
+
+enum SCREEN_WIDTH {
+  quarter = "25vw",
+  half = "50vw",
+  threeQuarter = "75vw",
+  full = "100vw",
+}
+
 enum PADDING {
   xs = ".25em",
   s = ".5em",
@@ -57,8 +71,17 @@ enum RADII {
   xs = ".25em",
   s = ".5em",
   m = ".75em",
-  l = "1em",
+  l = "25%",
   xl = "1.25em",
 }
 
-export { COLOR, PADDING, MARGIN, RADII, WEIGHTS, FONT_SIZE };
+export {
+  COLOR,
+  PADDING,
+  MARGIN,
+  RADII,
+  WEIGHTS,
+  FONT_SIZE,
+  SCREEN_WIDTH,
+  SCREEN_HEIGHT,
+};
