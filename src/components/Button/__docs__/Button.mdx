@@ -18,15 +18,14 @@ Button component with different props.
 
 ```ts
 import {Button} from "@MikeyAlmighty/raastaurant-ui";
-import ButtonColorMapper from "../../../utils/colorMappers/ButtonColorMapper";
-import { PADDING, MARGIN } from "../../../utils/constants";
+import { PADDING, MARGIN, BUTTON_TYPE } from "../../../utils/constants";
 
 const ExampleButton = () => {
     return (
         <Button
             text = {"Button"}
             onClick = {()=>console.log("Clicked")}
-            $buttonType={ButtonColorMapper.PRIMARY}
+            $buttonType={BUTTON_TYPE.primary}
             $pt={PADDING.xl}
             $mb={MARGIN.s}
         />

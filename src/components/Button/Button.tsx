@@ -1,12 +1,12 @@
 import React, { MouseEventHandler } from "react";
 
-import { COLOR_TYPE } from "@/utils/constants.ts";
+import { BUTTON_TYPE } from "@/utils/constants.ts";
 import { MStyledProps } from "@/mstyled.ts";
 import { StyledButton } from "@/components/Button/style.ts";
 
 export type ButtonProps = MStyledProps & {
   text?: string;
-  $buttonType?: COLOR_TYPE;
+  $buttonType?: BUTTON_TYPE;
   disabled: boolean;
   testId?: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
@@ -36,6 +36,14 @@ const Button: React.FC<ButtonProps> = ({
       $buttonType={$buttonType}
       disabled={disabled}
       $mt={$mt}
+      whileHover={{
+        rotate: [0, 0, -5, 5, 0],
+        border: "1px solid black",
+      }}
+      transition={{
+        duration: 0.25,
+        ease: "linear",
+      }}
       $mr={$mr}
       $mb={$mb}
       $ml={$ml}

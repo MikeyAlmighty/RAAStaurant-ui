@@ -1,7 +1,7 @@
-enum COLOR_TYPE {
+enum BUTTON_TYPE {
   PRIMARY = "primary",
   SECONDARY = "secondary",
   TERTIARY = "tertiary",
 }
 
-export { COLOR_TYPE };
+export { BUTTON_TYPE };

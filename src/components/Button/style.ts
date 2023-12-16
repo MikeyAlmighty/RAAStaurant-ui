@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+
 import { ButtonColorMapper } from "@/utils/colorMappers/ButtonColorMapper.ts";
 import { COLOR, RADII, WEIGHTS } from "@/utils/theme.ts";
 import { ButtonProps } from "@/components/Button/Button.tsx";
 
-export const StyledButton = styled.button<ButtonProps>`
+export const StyledButton = styled(motion.button)<ButtonProps>`
   border: 0;
   line-height: 1;
   font-size: 15px;
@@ -36,7 +38,7 @@ export const StyledButton = styled.button<ButtonProps>`
   background-color: ${({ $buttonType }) =>
     $buttonType ? ButtonColorMapper[$buttonType].backgroundColor : COLOR.black};
 
-  &:hover {
-    border: 2px solid ${COLOR.black};
-  }
+  // &:hover {
+  //   border: 2px solid ${COLOR.black};
+  // }
 `;
