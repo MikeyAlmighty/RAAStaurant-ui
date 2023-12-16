@@ -25,12 +25,24 @@ enum MARGIN {
   xl = "1.25em",
 }
 
-const RADII = {
-  xs: ".25em",
-  s: ".5em",
-  m: ".75em",
-  l: "1em",
-  xl: "1.25em",
-};
+enum WEIGHTS {
+  hairline = "100",
+  thin = "200",
+  light = "300",
+  normal = "400",
+  medium = "500",
+  semibold = "600",
+  bold = "700",
+  extrabold = "800",
+  black = "900",
+}
 
-export { COLOR, PADDING, MARGIN, RADII };
+enum RADII {
+  xs = ".25em",
+  s = ".5em",
+  m = ".75em",
+  l = "1em",
+  xl = "1.25em",
+}
+
+export { COLOR, PADDING, MARGIN, RADII, WEIGHTS };
