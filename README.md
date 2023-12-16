@@ -2,6 +2,9 @@
 
 Component Library for **RAAStaurant**
 
+## Designs
+[Figma](https://www.figma.com/file/3nXsOf18664v9qqbuf8zit/RAAStaurant?type=design&node-id=0%3A1&mode=design&t=aqhp6Qqkm05EQbC1-1)
+
 ## Release (CI/CD)
 
 ### This project follows [SemVer](https://semver.org/) versioning
