@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 import { ButtonColorMapper } from "@/utils/colorMappers/ButtonColorMapper.ts";
-import { COLOR, FONT_SIZE, RADII, WEIGHTS } from "@/utils/theme.ts";
+import { COLOR, FONT_SIZE, RADII, FONT_WEIGHTS } from "@/utils/theme.ts";
 import { ButtonProps } from "@/components/Button/Button.tsx";
 
 export const StyledButton = styled(motion.button)<ButtonProps>`
@@ -14,7 +14,7 @@ export const StyledButton = styled(motion.button)<ButtonProps>`
   color: ${({ $buttonType }) =>
     $buttonType ? ButtonColorMapper[$buttonType].textColor : COLOR.white};
   cursor: pointer;
-  font-weight: ${WEIGHTS.bold};
+  font-weight: ${FONT_WEIGHTS.bold};
 
   text-transform: uppercase;
 

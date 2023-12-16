@@ -1,12 +1,14 @@
 import React, { MouseEventHandler } from "react";
-
-import { BUTTON_TYPE } from "@/utils/constants.ts";
 import { MStyledProps } from "@/mstyled.ts";
 import { StyledButton } from "@/components/Button/style.ts";
+import { COLOR } from "@/utils/theme.ts";
 
 export type ButtonProps = MStyledProps & {
   text?: string;
-  $buttonType?: BUTTON_TYPE;
+  $buttonType?:
+    | typeof COLOR.primary
+    | typeof COLOR.secondary
+    | typeof COLOR.tertiary;
   disabled: boolean;
   testId?: string;
   onClick: MouseEventHandler<HTMLButtonElement>;

@@ -1,17 +1,16 @@
-import { BUTTON_TYPE } from "@/utils/constants.ts";
 import { COLOR } from "@/utils/theme.ts";
 
 export const ButtonColorMapper = {
-  [BUTTON_TYPE.PRIMARY]: {
-    backgroundColor: COLOR[BUTTON_TYPE.PRIMARY],
+  [COLOR.primary]: {
+    backgroundColor: COLOR.primary,
     textColor: COLOR.white,
   },
-  [BUTTON_TYPE.SECONDARY]: {
-    backgroundColor: COLOR[BUTTON_TYPE.SECONDARY],
+  [COLOR.secondary]: {
+    backgroundColor: COLOR.secondary,
     textColor: COLOR.black,
   },
-  [BUTTON_TYPE.TERTIARY]: {
-    backgroundColor: COLOR[BUTTON_TYPE.TERTIARY],
+  [COLOR.tertiary]: {
+    backgroundColor: COLOR.tertiary,
     textColor: COLOR.black,
   },
 };

@@ -1,9 +1,7 @@
-import { BUTTON_TYPE } from "./constants.ts";
-
 const COLOR = {
-  [BUTTON_TYPE.PRIMARY]: "#37FB26",
-  [BUTTON_TYPE.SECONDARY]: "#BCBDBD",
-  [BUTTON_TYPE.TERTIARY]: "#F8587E",
+  primary: "#37FB26",
+  secondary: "#BCBDBD",
+  tertiary: "#F8587E",
   screenBackground: "#E1EAE9",
   black: "#000000",
   white: "#FFFFFF",
@@ -55,7 +53,7 @@ enum FONT_SIZE {
   "9xl" = "8rem",
 }
 
-enum WEIGHTS {
+enum FONT_WEIGHTS {
   hairline = "100",
   thin = "200",
   light = "300",
@@ -80,7 +78,7 @@ export {
   PADDING,
   MARGIN,
   RADII,
-  WEIGHTS,
+  FONT_WEIGHTS,
   FONT_SIZE,
   SCREEN_WIDTH,
   SCREEN_HEIGHT,

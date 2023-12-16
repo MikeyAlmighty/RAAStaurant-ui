@@ -1,9 +1,10 @@
-import React, { MouseEventHandler } from "react";
+import React, { MouseEventHandler, ReactElement } from "react";
 
 import { MStyledProps } from "@/mstyled.ts";
 import {
   Container,
   Description,
+  ImageContainer,
   StyledProductCard,
   TextContainer,
   Title,
@@ -19,6 +20,7 @@ export type ProductCardProps = MStyledProps & {
   title: string;
   description: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
+  image: ReactElement;
 };
 
 const ProductCard: React.FC<ProductCardProps> = ({
@@ -34,6 +36,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   description,
   // discount,
   onClick,
+  image,
   ...props
 }) => {
   return (
@@ -56,6 +59,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         $pl={$pl}
         {...props}
       >
+        <ImageContainer>{image}</ImageContainer>
         <TextContainer>
           <Title>{title}</Title>
           <Description>{description}</Description>

@@ -19,6 +19,14 @@ const ExampleProductCard: FC<ProductCardProps> = ({
       <ProductCard
         title={title}
         description={description}
+        image={
+          <img
+            style={{ width: "16em", height: "8em" }}
+            src={
+              "https://i.pinimg.com/736x/d0/91/a1/d091a1b5fb9d52a5cf4d0f08ad86daa2.jpg"
+            }
+          />
+        }
         disabled={disabled}
         onClick={onClick}
       />

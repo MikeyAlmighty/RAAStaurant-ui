@@ -2,23 +2,25 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import {
   COLOR,
+  FONT_WEIGHTS,
   PADDING,
   RADII,
   SCREEN_HEIGHT,
   SCREEN_WIDTH,
-  WEIGHTS,
 } from "@/utils/theme.ts";
 import { ButtonProps } from "@/components/Button/Button.tsx";
-import { BUTTON_TYPE } from "@/utils/constants.ts";
 import { ProductCardProps } from "@/components/ProductCard/ProductCard.tsx";
 
 export const StyledProductCard = styled.div<ButtonProps>`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 0;
   line-height: 1;
 
   background-color: ${COLOR.screenBackground};
   cursor: pointer;
-  font-weight: ${WEIGHTS.bold};
+  font-weight: ${FONT_WEIGHTS.bold};
 
   margin-top: ${({ $mt }) => $mt};
   margin-right: ${({ $mr }) => $mr};
@@ -42,9 +44,7 @@ export const Container = styled(motion.div)<ProductCardProps>`
   width: ${SCREEN_WIDTH.quarter};
 `;
 
-// export const ImageContainer = styled.img`
-//
-// `;
+export const ImageContainer = styled.div``;
 
 export const TextContainer = styled.span`
   display: flex;
@@ -54,8 +54,13 @@ export const TextContainer = styled.span`
 
 export const Title = styled.span`
   color: ${COLOR.black};
+  padding-bottom: ${PADDING.m};
 `;
 
 export const Description = styled.span`
-  color: ${COLOR[BUTTON_TYPE.SECONDARY]};
+  color: ${COLOR.secondary};
+`;
+
+export const DiscountContainer = styled.span`
+  background-color: ${COLOR.tertiary};
 `;
