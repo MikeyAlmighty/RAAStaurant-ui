@@ -8,7 +8,7 @@ type ButtonType =
   | typeof COLOR.secondary
   | typeof COLOR.tertiary;
 
-export type ButtonProps = MStyledProps & {
+export type ButtonProps = Partial<MStyledProps> & {
   text?: string;
   $buttonType?: ButtonType;
   disabled: boolean;
@@ -45,7 +45,7 @@ const Button: React.FC<ButtonProps> = ({
         border: "1px solid black",
       }}
       transition={{
-        duration: 0.25,
+        duration: 0.15,
         ease: "linear",
       }}
       $mr={$mr}
