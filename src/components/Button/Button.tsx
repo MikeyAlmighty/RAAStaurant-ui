@@ -3,12 +3,14 @@ import { MStyledProps } from "@/mstyled.ts";
 import { StyledButton } from "@/components/Button/style.ts";
 import { COLOR } from "@/utils/theme.ts";
 
+type ButtonType =
+  | typeof COLOR.primary
+  | typeof COLOR.secondary
+  | typeof COLOR.tertiary;
+
 export type ButtonProps = MStyledProps & {
   text?: string;
-  $buttonType?:
-    | typeof COLOR.primary
-    | typeof COLOR.secondary
-    | typeof COLOR.tertiary;
+  $buttonType?: ButtonType;
   disabled: boolean;
   testId?: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
