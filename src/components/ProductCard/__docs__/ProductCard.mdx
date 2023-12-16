@@ -1,0 +1,36 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import ExampleProductCard from "./ExampleProductCard.tsx";
+import * as ProductCard from "./ProductCard.stories.tsx";
+
+<Meta of={ProductCard} title="ProductCard" />
+
+# ProductCard
+
+ProductCard component with different props.
+
+#### Example
+
+<Canvas of={ProductCard.NoDiscount} />
+<Canvas of={ProductCard.Discount} />
+
+## Usage
+
+```ts
+import {ProductCard} from "@MikeyAlmighty/raastaurant-ui";
+
+const ExampleProductCard = () => {
+    return (
+        <ProductCard
+            title = "Chicken Burger",
+            description = "Gouda cheese, chicken breasts, little gem, white cabbage, honey",
+            onClick = {()=>console.log("Clicked")}
+            $pt={PADDING.xl}
+            $mb={MARGIN.s}
+        />
+    );
+};
+
+export default ExampleProductCard;
+```
+
+#### Arguments
