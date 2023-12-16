@@ -4,6 +4,10 @@ import ProductCard, { ProductCardProps } from "../ProductCard";
 const ExampleProductCard: FC<ProductCardProps> = ({
   disabled = false,
   title = "Chicken Burger",
+  discount = {
+    hasDiscount: true,
+    discountLabel: "30% Off",
+  },
   description = "Gouda cheese, chicken breasts, little gem, white cabbage, honey",
   onClick = () => {},
 }) => {
@@ -21,13 +25,14 @@ const ExampleProductCard: FC<ProductCardProps> = ({
         description={description}
         image={
           <img
-            style={{ width: "16em", height: "8em" }}
+            style={{ width: "16em", height: "8em", position: "relative" }}
             src={
               "https://i.pinimg.com/736x/d0/91/a1/d091a1b5fb9d52a5cf4d0f08ad86daa2.jpg"
             }
           />
         }
         disabled={disabled}
+        discount={discount}
         onClick={onClick}
       />
     </div>

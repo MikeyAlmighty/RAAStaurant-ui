@@ -4,6 +4,7 @@ import { MStyledProps } from "@/mstyled.ts";
 import {
   Container,
   Description,
+  DiscountContainer,
   ImageContainer,
   StyledProductCard,
   TextContainer,
@@ -34,7 +35,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   $ml,
   title,
   description,
-  // discount,
+  discount,
   onClick,
   image,
   ...props
@@ -46,6 +47,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
         border: "1px solid black",
       }}
     >
+      <ImageContainer>
+        <>{image}</>
+        {discount?.hasDiscount && (
+          <DiscountContainer>{discount.discountLabel}</DiscountContainer>
+        )}
+      </ImageContainer>
       <StyledProductCard
         onClick={onClick}
         // data-testid={testId}
@@ -59,7 +66,6 @@ const ProductCard: React.FC<ProductCardProps> = ({
         $pl={$pl}
         {...props}
       >
-        <ImageContainer>{image}</ImageContainer>
         <TextContainer>
           <Title>{title}</Title>
           <Description>{description}</Description>
