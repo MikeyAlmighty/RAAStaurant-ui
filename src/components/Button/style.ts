@@ -32,6 +32,7 @@ export const StyledButton = styled(motion.button)<ButtonProps>`
   padding-right: ${({ $pr }) => $pr};
   padding-bottom: ${({ $pb }) => $pb};
   padding-left: ${({ $pl }) => $pl};
+  border: 1px solid ${COLOR.black};
 
   color: ${({ $buttonType }) =>
     $buttonType ? ButtonColorMapper[$buttonType].textColor : COLOR.white};

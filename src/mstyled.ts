@@ -16,4 +16,4 @@ type MMarginProps = {
   $mr: MARGIN;
 };
 
-export type MStyledProps = MPaddingProps & MMarginProps;
+export type MStyledProps = Partial<MPaddingProps & MMarginProps>;

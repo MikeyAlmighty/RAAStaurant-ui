@@ -8,7 +8,7 @@ type ButtonType =
   | typeof COLOR.secondary
   | typeof COLOR.tertiary;
 
-export type ButtonProps = Partial<MStyledProps> & {
+export type ButtonProps = MStyledProps & {
   text?: string;
   $buttonType?: ButtonType;
   disabled: boolean;
@@ -42,7 +42,7 @@ const Button: React.FC<ButtonProps> = ({
       $mt={$mt}
       whileHover={{
         rotate: [0, 0, -5, 5, 0],
-        border: "1px solid black",
+        border: "2px solid black",
       }}
       transition={{
         duration: 0.15,

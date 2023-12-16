@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, ReactElement } from "react";
+import { FC, MouseEventHandler, ReactElement } from "react";
 
 import { MStyledProps } from "@/mstyled.ts";
 import {
@@ -24,7 +24,7 @@ export type ProductCardProps = MStyledProps & {
   image: ReactElement;
 };
 
-const ProductCard: React.FC<ProductCardProps> = ({
+const ProductCard: FC<ProductCardProps> = ({
   $pt,
   $pr,
   $pb,

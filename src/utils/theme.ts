@@ -2,7 +2,7 @@ const COLOR = {
   primary: "#37FB26",
   secondary: "#BCBDBD",
   tertiary: "#F8587E",
-  screenBackground: "#E1EAE9",
+  screenBackground: "#EDEFEF",
   black: "#000000",
   white: "#FFFFFF",
 };
