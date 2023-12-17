@@ -1,6 +1,5 @@
 import { FC, MouseEventHandler, ReactElement } from "react";
 
-import { MStyledProps } from "@/mstyled.ts";
 import {
   Container,
   Description,
@@ -11,7 +10,7 @@ import {
   Title,
 } from "@/components/ProductCard/style.ts";
 
-export type ProductCardProps = MStyledProps & {
+export type ProductCardProps = {
   text?: string;
   disabled: boolean;
   discount: {
@@ -25,14 +24,6 @@ export type ProductCardProps = MStyledProps & {
 };
 
 const ProductCard: FC<ProductCardProps> = ({
-  $pt,
-  $pr,
-  $pb,
-  $pl,
-  $mt,
-  $mr,
-  $mb,
-  $ml,
   title,
   description,
   discount,
@@ -56,14 +47,6 @@ const ProductCard: FC<ProductCardProps> = ({
       <StyledProductCard
         onClick={onClick}
         // data-testid={testId}
-        $mt={$mt}
-        $mr={$mr}
-        $mb={$mb}
-        $ml={$ml}
-        $pt={$pt}
-        $pr={$pr}
-        $pb={$pb}
-        $pl={$pl}
         {...props}
       >
         <TextContainer>

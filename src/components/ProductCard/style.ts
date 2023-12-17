@@ -23,16 +23,6 @@ export const StyledProductCard = styled.div<ButtonProps>`
   cursor: pointer;
   font-weight: ${FONT_WEIGHTS.bold};
 
-  margin-top: ${({ $mt }) => $mt};
-  margin-right: ${({ $mr }) => $mr};
-  margin-bottom: ${({ $mb }) => $mb};
-  margin-left: ${({ $ml }) => $ml};
-
-  padding-top: ${({ $pt }) => $pt};
-  padding-right: ${({ $pr }) => $pr};
-  padding-bottom: ${({ $pb }) => $pb};
-  padding-left: ${({ $pl }) => $pl};
-
   border-radius: ${RADII.s};
   color: ${COLOR.black};
 `;

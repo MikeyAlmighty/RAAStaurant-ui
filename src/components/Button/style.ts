@@ -22,15 +22,6 @@ export const StyledButton = styled(motion.button)<ButtonProps>`
   overflow: hidden;
   position: relative;
 
-  margin-top: ${({ $mt }) => $mt};
-  margin-right: ${({ $mr }) => $mr};
-  margin-bottom: ${({ $mb }) => $mb};
-  margin-left: ${({ $ml }) => $ml};
-
-  padding-top: ${({ $pt }) => $pt};
-  padding-right: ${({ $pr }) => $pr};
-  padding-bottom: ${({ $pb }) => $pb};
-  padding-left: ${({ $pl }) => $pl};
   border: 1px solid ${COLOR.black};
 
   color: ${({ $buttonType }) =>
