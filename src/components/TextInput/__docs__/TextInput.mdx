@@ -1,0 +1,37 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import * as TextInput from "./TextInput.stories.tsx";
+
+<Meta of={TextInput} title="Button" />
+
+# TextInput
+TextInput component with different props.
+
+#### Example
+
+<Canvas of={TextInput.Enabled} />
+<Canvas of={TextInput.Disabled} />
+
+## Usage
+
+```ts
+import {TextInput} from "@MikeyAlmighty/raastaurant-ui";
+
+const ExampleTextInput = () => {
+    return (
+        <TextInput
+          label = {"Name"}
+          disabled={true}
+          defaultValue = {"DeadPool"}
+        />
+    );
+};
+
+export default ExampleTextInput ;
+```
+
+#### Arguments
+
+- **label**  - A string that represents the label of the input.
+- **defaultValue**  - A string that represents the `defaulValue` of the **input**.
+- **disabled** - Boolean indicating whether the input should be disabled or not. When disabled, the input cannot be
+changed.

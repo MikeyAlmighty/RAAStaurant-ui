@@ -6,7 +6,6 @@ import { COLOR, FONT_SIZE, RADII, FONT_WEIGHTS } from "@/utils/theme.ts";
 import { ButtonProps } from "@/components/Button/Button.tsx";
 
 export const StyledButton = styled(motion.button)<ButtonProps>`
-  border: 0;
   line-height: 1;
   font-size: ${FONT_SIZE.base};
   height: 3em;

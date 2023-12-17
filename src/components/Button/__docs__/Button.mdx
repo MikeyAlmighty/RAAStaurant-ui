@@ -1,5 +1,4 @@
 import { Canvas, Meta } from "@storybook/blocks";
-import ExampleButton from "./ExampleButton.tsx";
 import * as Button from "./Button.stories.tsx";
 
 <Meta of={Button} title="Button" />
@@ -26,8 +25,6 @@ const ExampleButton = () => {
             text = {"Button"}
             onClick = {()=>console.log("Clicked")}
             $buttonType={COLOR.primary}
-            $pt={PADDING.xl}
-            $mb={MARGIN.s}
         />
     );
 };
@@ -44,5 +41,3 @@ button stands out as the main action in a user interface.
 clicked or interacted with.
 - **onClick** - A function that is called when the button is clicked. It receives a MouseEventHandler for handling the
 click event on the button element.
-- **$m*** - Margin (mt, mr, mb, ml)
-- **$p*** - Padding (pt, pr, pb, pl)
