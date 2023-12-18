@@ -1,15 +1,17 @@
 import React, { MouseEventHandler } from "react";
 import { StyledButton } from "@/components/Button/style.ts";
 import { COLOR } from "@/utils/theme.ts";
+import { MStyledProps } from "@/mstyled.ts";
 
 type ButtonType =
   | typeof COLOR.primary
   | typeof COLOR.secondary
   | typeof COLOR.tertiary;
 
-export type ButtonProps = {
+export type ButtonProps = MStyledProps & {
   text?: string;
   $buttonType?: ButtonType;
+  type: "submit" | "button" | "reset";
   disabled: boolean;
   testId?: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
@@ -19,13 +21,14 @@ const Button: React.FC<ButtonProps> = ({
   $buttonType,
   disabled,
   text,
+  type = "button",
   testId,
   onClick,
   ...props
 }) => {
   return (
     <StyledButton
-      type="button"
+      type={type}
       onClick={onClick}
       data-testid={testId}
       $buttonType={$buttonType}

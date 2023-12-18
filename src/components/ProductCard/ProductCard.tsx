@@ -1,35 +1,33 @@
-import { FC, MouseEventHandler, ReactElement } from "react";
+import { FC, ReactElement } from "react";
 
 import {
   Container,
-  Description,
+  // Description,
   DiscountContainer,
   ImageContainer,
-  StyledProductCard,
-  TextContainer,
-  Title,
+  // StyledProductCard,
+  // TextContainer,
+  // Title,
 } from "@/components/ProductCard/style.ts";
 
 export type ProductCardProps = {
   text?: string;
   disabled: boolean;
-  discount: {
+  discount: Partial<{
     hasDiscount: boolean;
     discountLabel?: string;
-  };
+  }>;
   title: string;
   description: string;
-  onClick: MouseEventHandler<HTMLButtonElement>;
-  image: ReactElement;
+  image?: ReactElement;
 };
 
 const ProductCard: FC<ProductCardProps> = ({
-  title,
-  description,
+  // title,
+  // description,
   discount,
-  onClick,
   image,
-  ...props
+  // ...props
 }) => {
   return (
     <Container
@@ -44,16 +42,12 @@ const ProductCard: FC<ProductCardProps> = ({
           <DiscountContainer>{discount.discountLabel}</DiscountContainer>
         )}
       </ImageContainer>
-      <StyledProductCard
-        onClick={onClick}
-        // data-testid={testId}
-        {...props}
-      >
-        <TextContainer>
-          <Title>{title}</Title>
-          <Description>{description}</Description>
-        </TextContainer>
-      </StyledProductCard>
+      {/*<StyledProductCard {...props}>*/}
+      {/*  <TextContainer>*/}
+      {/*    <Title>{title}</Title>*/}
+      {/*    <Description>{description}</Description>*/}
+      {/*  </TextContainer>*/}
+      {/*</StyledProductCard>*/}
     </Container>
   );
 };

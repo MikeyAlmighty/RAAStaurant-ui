@@ -9,10 +9,9 @@ import {
   SCREEN_HEIGHT,
   SCREEN_WIDTH,
 } from "@/utils/theme.ts";
-import { ButtonProps } from "@/components/Button/Button.tsx";
 import { ProductCardProps } from "@/components/ProductCard/ProductCard.tsx";
 
-export const StyledProductCard = styled.div<ButtonProps>`
+export const StyledProductCard = styled.div<ProductCardProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
