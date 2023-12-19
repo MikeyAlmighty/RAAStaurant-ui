@@ -1,35 +1,47 @@
 import React, { HTMLInputTypeAttribute } from "react";
-import { Container, StyledTextInput } from "@/components/TextInput/style.ts";
+
+import {
+  Container,
+  StyledTextInput,
+  StyledErrorMessage,
+} from "@/components/TextInput/style.ts";
+import { COLOR } from "@/utils/theme.ts";
 
 export type TextInputProps = {
   label: string;
   defaultValue?: string;
   disabled: boolean;
-  type: HTMLInputTypeAttribute;
+  name: string;
+  errorMessage?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  type?: HTMLInputTypeAttribute;
   testId?: string;
 };
 
 const TextInput: React.FC<TextInputProps> = ({
   disabled,
   defaultValue,
+  errorMessage,
+  onChange,
   type = "text",
+  name,
   label,
   ...props
 }) => {
+  console.log("error message: ", errorMessage);
   return (
     <Container>
       {label}:
       <StyledTextInput
         type={type}
-        // whileHover={{ border: `2px solid ${COLOR.primary}` }}
-        transition={{
-          duration: 0.15,
-          ease: "easeOut",
-        }}
+        name={name}
+        onChange={onChange}
+        whileHover={{ border: `2px solid ${COLOR.primary}` }}
         defaultValue={defaultValue}
         disabled={disabled}
         {...props}
       />
+      {errorMessage && <StyledErrorMessage>{errorMessage}</StyledErrorMessage>}
     </Container>
   );
 };

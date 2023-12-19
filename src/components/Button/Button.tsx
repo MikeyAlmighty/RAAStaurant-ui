@@ -14,7 +14,7 @@ export type ButtonProps = MStyledProps & {
   type: "submit" | "button" | "reset";
   disabled: boolean;
   testId?: string;
-  onClick: MouseEventHandler<HTMLButtonElement>;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 };
 
 const Button: React.FC<ButtonProps> = ({

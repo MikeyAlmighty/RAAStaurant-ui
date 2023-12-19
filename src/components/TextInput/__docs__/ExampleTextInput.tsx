@@ -4,6 +4,7 @@ import TextInput, { TextInputProps } from "../TextInput";
 const ExampleTextInput: FC<TextInputProps> = ({
   disabled = false,
   label,
+  errorMessage,
   defaultValue,
 }) => {
   return (
@@ -18,6 +19,7 @@ const ExampleTextInput: FC<TextInputProps> = ({
       <TextInput
         label={label}
         defaultValue={defaultValue}
+        errorMessage={errorMessage}
         disabled={disabled}
       />
     </div>

@@ -10,6 +10,7 @@ TextInput component with different props.
 
 <Canvas of={TextInput.Enabled} />
 <Canvas of={TextInput.Disabled} />
+<Canvas of={TextInput.WithError} />
 
 ## Usage
 
@@ -21,6 +22,8 @@ const ExampleTextInput = () => {
         <TextInput
           label = {"Name"}
           disabled={true}
+          name={name}
+          errorMessage={errors.name}
           defaultValue = {"DeadPool"}
         />
     );
@@ -33,5 +36,6 @@ export default ExampleTextInput ;
 
 - **label**  - A string that represents the label of the input.
 - **defaultValue**  - A string that represents the `defaulValue` of the **input**.
+- **errorMessage**  - A `FieldError` that represents the **errorMessage** of the **input** returned from `react-hook-form`.
 - **disabled** - Boolean indicating whether the input should be disabled or not. When disabled, the input cannot be
 changed.

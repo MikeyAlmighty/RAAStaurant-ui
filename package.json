@@ -41,8 +41,9 @@
     "@semantic-release/release-notes-generator": "^12.1.0",
     "framer-motion": "^10.16.16",
     "react-dom": "^18.2.0",
-    "styled-components": "^6.1.1",
-    "semantic-release": "^22.0.8"
+    "react-hook-form": "^7.49.2",
+    "semantic-release": "^22.0.8",
+    "styled-components": "^6.1.1"
   },
   "peerDependencies": {
     "react": "^18.2.0"

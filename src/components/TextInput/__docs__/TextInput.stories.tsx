@@ -24,3 +24,12 @@ export const Disabled: Story = {
     disabled: true,
   },
 };
+
+export const WithError: Story = {
+  args: {
+    defaultValue: "Deadpool",
+    label: "Name",
+    errorMessage: "Does not eat chimichangas!",
+    disabled: true,
+  },
+};
