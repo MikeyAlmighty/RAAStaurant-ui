@@ -2,32 +2,32 @@ import { FC, ReactElement } from "react";
 
 import {
   Container,
-  // Description,
+  Description,
   DiscountContainer,
   ImageContainer,
-  // StyledProductCard,
-  // TextContainer,
-  // Title,
+  StyledProductCard,
+  TextContainer,
+  Title,
 } from "@/components/ProductCard/style.ts";
 
 export type ProductCardProps = {
+  title: string;
+  description: string;
   text?: string;
   disabled: boolean;
   discount: Partial<{
     hasDiscount: boolean;
     discountLabel?: string;
   }>;
-  title: string;
-  description: string;
   image?: ReactElement;
 };
 
 const ProductCard: FC<ProductCardProps> = ({
-  // title,
-  // description,
+  title,
+  description,
   discount,
   image,
-  // ...props
+  ...props
 }) => {
   return (
     <Container
@@ -42,12 +42,12 @@ const ProductCard: FC<ProductCardProps> = ({
           <DiscountContainer>{discount.discountLabel}</DiscountContainer>
         )}
       </ImageContainer>
-      {/*<StyledProductCard {...props}>*/}
-      {/*  <TextContainer>*/}
-      {/*    <Title>{title}</Title>*/}
-      {/*    <Description>{description}</Description>*/}
-      {/*  </TextContainer>*/}
-      {/*</StyledProductCard>*/}
+      <StyledProductCard {...props}>
+        <TextContainer>
+          <Title>{title}</Title>
+          <Description>{description}</Description>
+        </TextContainer>
+      </StyledProductCard>
     </Container>
   );
 };

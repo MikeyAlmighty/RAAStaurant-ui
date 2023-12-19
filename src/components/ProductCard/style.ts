@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+
 import {
   COLOR,
   FONT_WEIGHTS,
@@ -11,7 +12,7 @@ import {
 } from "@/utils/theme.ts";
 import { ProductCardProps } from "@/components/ProductCard/ProductCard.tsx";
 
-export const StyledProductCard = styled.div<ProductCardProps>`
+export const StyledProductCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
