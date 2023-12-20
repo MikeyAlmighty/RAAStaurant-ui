@@ -6,6 +6,7 @@ import {
   StyledErrorMessage,
 } from "@/components/TextInput/style.ts";
 import { COLOR } from "@/utils/theme.ts";
+import { FieldValues, UseFormRegister } from "react-hook-form";
 
 export type TextInputProps = {
   label: string;
@@ -15,6 +16,7 @@ export type TextInputProps = {
   errorMessage?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   type?: HTMLInputTypeAttribute;
+  register: UseFormRegister<FieldValues>;
   testId?: string;
 };
 
@@ -22,10 +24,10 @@ const TextInput: React.FC<TextInputProps> = ({
   disabled,
   defaultValue,
   errorMessage,
-  onChange,
   type = "text",
   name,
   label,
+  register,
   ...props
 }) => {
   console.log("error message: ", errorMessage);
@@ -34,12 +36,11 @@ const TextInput: React.FC<TextInputProps> = ({
       {label}:
       <StyledTextInput
         type={type}
-        name={name}
-        onChange={onChange}
+        {...props}
+        {...register(name)}
         whileHover={{ border: `2px solid ${COLOR.primary}` }}
         defaultValue={defaultValue}
         disabled={disabled}
-        {...props}
       />
       {errorMessage && <StyledErrorMessage>{errorMessage}</StyledErrorMessage>}
     </Container>
