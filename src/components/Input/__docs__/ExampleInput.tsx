@@ -1,7 +1,7 @@
 import { FC } from "react";
-import TextInput, { TextInputProps } from "../TextInput";
+import Input, { InputProps } from "../Input";
 
-const ExampleTextInput: FC<TextInputProps> = ({
+const ExampleInput: FC<InputProps> = ({
   disabled = false,
   name,
   errorMessage,
@@ -16,7 +16,7 @@ const ExampleTextInput: FC<TextInputProps> = ({
         height: "100%",
       }}
     >
-      <TextInput
+      <Input
         name={name}
         defaultValue={defaultValue}
         errorMessage={errorMessage}
@@ -26,4 +26,4 @@ const ExampleTextInput: FC<TextInputProps> = ({
   );
 };
 
-export default ExampleTextInput;
+export default ExampleInput;

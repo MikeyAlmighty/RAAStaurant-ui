@@ -6,11 +6,11 @@ import {
   StyledTextInput,
   StyledErrorMessage,
   TextContainer,
-} from "@/components/TextInput/style.ts";
+} from "@/components/Input/style.ts";
 import { COLOR } from "@/utils/theme.ts";
 import { FieldValues, UseFormRegister } from "react-hook-form";
 
-export type TextInputProps = {
+export type InputProps = {
   defaultValue?: number | string;
   disabled: boolean;
   name: string;
@@ -21,7 +21,7 @@ export type TextInputProps = {
   testId?: string;
 };
 
-const TextInput: React.FC<TextInputProps> = ({
+const Input: React.FC<InputProps> = ({
   disabled,
   defaultValue,
   errorMessage,
@@ -50,4 +50,4 @@ const TextInput: React.FC<TextInputProps> = ({
   );
 };
 
-export default TextInput;
+export default Input;

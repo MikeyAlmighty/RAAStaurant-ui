@@ -7,11 +7,9 @@ import {
   FONT_WEIGHT,
 } from "@/utils/theme.ts";
 import { motion } from "framer-motion";
-import { TextInputProps } from "@/components/TextInput/TextInput.tsx";
+import { InputProps } from "@/components/Input/Input.tsx";
 
-export const StyledTextInput = styled(motion.input)<
-  Omit<TextInputProps, "label">
->`
+export const StyledTextInput = styled(motion.input)<Omit<InputProps, "label">>`
   margin: ${MARGIN.s};
   padding: ${PADDING.m};
 `;

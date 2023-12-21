@@ -1,25 +1,25 @@
 import { Canvas, Meta } from "@storybook/blocks";
-import * as TextInput from "./TextInput.stories.tsx";
+import * as Input from "./Input.stories.tsx";
 
-<Meta of={TextInput} title="TextInput" />
+<Meta of={Input} title="Input" />
 
-# TextInput
-TextInput component with different props.
+# Input
+Input component with different props.
 
 #### Example
 
-<Canvas of={TextInput.Enabled} />
-<Canvas of={TextInput.Disabled} />
-<Canvas of={TextInput.WithError} />
+<Canvas of={Input.Enabled} />
+<Canvas of={Input.Disabled} />
+<Canvas of={Input.WithError} />
 
 ## Usage
 
 ```ts
-import {TextInput} from "@MikeyAlmighty/raastaurant-ui";
+import {Input} from "@MikeyAlmighty/raastaurant-ui";
 
-const ExampleTextInput = () => {
+const ExampleInput = () => {
     return (
-        <TextInput
+        <Input
           name={name}
           disabled={true}
           errorMessage={errors.name}
@@ -28,7 +28,7 @@ const ExampleTextInput = () => {
     );
 };
 
-export default ExampleTextInput ;
+export default ExampleInput ;
 ```
 
 #### Arguments
