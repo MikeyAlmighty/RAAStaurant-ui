@@ -53,7 +53,7 @@ enum FONT_SIZE {
   "9xl" = "8rem",
 }
 
-enum FONT_WEIGHTS {
+enum FONT_WEIGHT {
   hairline = "100",
   thin = "200",
   light = "300",
@@ -78,7 +78,7 @@ export {
   PADDING,
   MARGIN,
   RADII,
-  FONT_WEIGHTS,
+  FONT_WEIGHT,
   FONT_SIZE,
   SCREEN_WIDTH,
   SCREEN_HEIGHT,

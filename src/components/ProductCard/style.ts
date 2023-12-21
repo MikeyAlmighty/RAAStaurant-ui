@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import {
   COLOR,
-  FONT_WEIGHTS,
+  FONT_WEIGHT,
   MARGIN,
   PADDING,
   RADII,
@@ -21,7 +21,7 @@ export const StyledProductCard = styled.div`
 
   background-color: ${COLOR.screenBackground};
   cursor: pointer;
-  font-weight: ${FONT_WEIGHTS.bold};
+  font-weight: ${FONT_WEIGHT.bold};
 
   border-radius: ${RADII.s};
   color: ${COLOR.black};

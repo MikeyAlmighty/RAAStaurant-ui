@@ -9,27 +9,33 @@ const meta: Meta<typeof ExampleTextInput> = {
 export default meta;
 type Story = StoryObj<typeof ExampleTextInput>;
 
+const register = () => {
+  return null;
+};
 export const Enabled: Story = {
   args: {
     defaultValue: "Deadpool",
-    label: "Name",
+    name: "name",
     disabled: false,
+    register,
   },
 };
 
 export const Disabled: Story = {
   args: {
     defaultValue: "Deadpool",
-    label: "Name",
+    name: "name",
     disabled: true,
+    register,
   },
 };
 
 export const WithError: Story = {
   args: {
     defaultValue: "Deadpool",
-    label: "Name",
+    name: "name",
     errorMessage: "Does not eat chimichangas!",
     disabled: true,
+    register,
   },
 };

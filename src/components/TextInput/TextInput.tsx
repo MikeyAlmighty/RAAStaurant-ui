@@ -2,15 +2,16 @@ import React, { HTMLInputTypeAttribute } from "react";
 
 import {
   Container,
+  StyledLabel,
   StyledTextInput,
   StyledErrorMessage,
+  TextContainer,
 } from "@/components/TextInput/style.ts";
 import { COLOR } from "@/utils/theme.ts";
 import { FieldValues, UseFormRegister } from "react-hook-form";
 
 export type TextInputProps = {
-  label: string;
-  defaultValue?: string;
+  defaultValue?: number | string;
   disabled: boolean;
   name: string;
   errorMessage?: string;
@@ -26,22 +27,24 @@ const TextInput: React.FC<TextInputProps> = ({
   errorMessage,
   type = "text",
   name,
-  label,
   register,
   ...props
 }) => {
-  console.log("error message: ", errorMessage);
+  const label = name.charAt(0).toUpperCase() + name.slice(1);
   return (
     <Container>
-      {label}:
-      <StyledTextInput
-        type={type}
-        {...props}
-        {...register(name)}
-        whileHover={{ border: `2px solid ${COLOR.primary}` }}
-        defaultValue={defaultValue}
-        disabled={disabled}
-      />
+      <TextContainer>
+        <StyledLabel>{label}</StyledLabel>
+        :
+        <StyledTextInput
+          type={type}
+          {...props}
+          {...(register ? register(name) : () => null)}
+          whileHover={{ border: `2px solid ${COLOR.primary}` }}
+          defaultValue={defaultValue}
+          disabled={disabled}
+        />
+      </TextContainer>
       {errorMessage && <StyledErrorMessage>{errorMessage}</StyledErrorMessage>}
     </Container>
   );

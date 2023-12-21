@@ -3,7 +3,7 @@ import TextInput, { TextInputProps } from "../TextInput";
 
 const ExampleTextInput: FC<TextInputProps> = ({
   disabled = false,
-  label,
+  name,
   errorMessage,
   defaultValue,
 }) => {
@@ -17,7 +17,7 @@ const ExampleTextInput: FC<TextInputProps> = ({
       }}
     >
       <TextInput
-        label={label}
+        name={name}
         defaultValue={defaultValue}
         errorMessage={errorMessage}
         disabled={disabled}
